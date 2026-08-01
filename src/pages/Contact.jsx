@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,6 +11,9 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  
+  const [isSending, setIsSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState({ type: '', text: '' });
 
   const handleChange = (e) => {
     setFormData({
@@ -18,10 +22,51 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSending(true);
+    setStatusMessage({ type: '', text: '' });
+
+    // Your EmailJS credentials - replace these with your own
+    const SERVICE_ID = 'service_cw1hbd7'; // Get from EmailJS dashboard
+    const TEMPLATE_ID = 'template_fkghoni'; // Get from EmailJS dashboard
+    const PUBLIC_KEY = '_uO1lWefEaRMp9N2v'; // Get from EmailJS dashboard
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'Kamendra Kumar', // Your name
+        reply_to: formData.email,
+      };
+
+      const response = await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully!', response);
+      setStatusMessage({ 
+        type: 'success', 
+        text: 'Thank you for your message! I will get back to you soon.' 
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setStatusMessage({ 
+        type: 'error', 
+        text: 'Failed to send message. Please try again later or contact me directly via email.' 
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -91,6 +136,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  disabled={isSending}
                 />
               </div>
               <div className="form-group">
@@ -101,6 +147,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  disabled={isSending}
                 />
               </div>
               <div className="form-group">
@@ -111,6 +158,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
+                  disabled={isSending}
                 />
               </div>
               <div className="form-group">
@@ -121,9 +169,24 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={isSending}
                 ></textarea>
               </div>
-              <button type="submit" className="submit-btn">Send Message</button>
+              
+              {/* Status Message */}
+              {statusMessage.text && (
+                <div className={`status-message ${statusMessage.type}`}>
+                  {statusMessage.text}
+                </div>
+              )}
+              
+              <button 
+                type="submit" 
+                className="submit-btn"
+                disabled={isSending}
+              >
+                {isSending ? 'Sending...' : 'Send Message'}
+              </button>
             </form>
           </div>
         </motion.div>
