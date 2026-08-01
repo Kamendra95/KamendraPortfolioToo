@@ -2,21 +2,21 @@
   "projects": [
     {
       "id": 1,
-      "title": "E-Commerce Platform",
-      "description": "Full-stack e-commerce solution with payment integration, admin dashboard, and real-time inventory management.",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
-      "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=600",
-      "github": "https://github.com",
-      "demo": "https://demo.com"
+      "title": "Personal Portfolio",
+      "description": "This is my personal portfolio, Mern Stack Developer and Content Creation.",
+      "technologies": ["HTML", "CSS", "Java Script"],
+      "image": "/images/PortfolioImage.png",
+      "github": "https://github.com/Kamendra95/PortfolioKamendra",
+      "demo": "https://kamendra.netlify.app/"
     },
     {
       "id": 2,
-      "title": "Task Management System",
-      "description": "Collaborative task management tool with real-time updates, file sharing, and team analytics.",
-      "technologies": ["Next.js", "Express", "PostgreSQL", "Socket.io", "Tailwind"],
-      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600",
-      "github": "https://github.com",
-      "demo": "https://demo.com"
+      "title": "Personal Portfolio Too",
+      "description": "This is my second personal portfolio, Mern Stack Developer.",
+      "technologies": ["React", "HTML", "CSS", "Java Script"],
+      "image": "/images/NewPortfolioToo.png",
+      "github": "https://github.com/Kamendra95/KamendraPortfolioToo",
+      "demo": "https://sharmajee.netlify.app/"
     },
     {
       "id": 3,

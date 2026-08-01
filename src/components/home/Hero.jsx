@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
-import heroImage from '../../assets/hero.png';
+import heroImage from '../../assets/images/KamendraDpToo.jpeg';
 import './Hero.css';
 
 const Hero = () => {
