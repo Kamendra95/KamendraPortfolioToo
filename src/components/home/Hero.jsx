@@ -37,7 +37,7 @@ const Hero = () => {
               <a href="https://x.com/KamendraK95" target="_blank" rel="noopener noreferrer">
                 <FaTwitter />
               </a>
-              <a href="mailto:john@example.com">
+              <a href="sharmakamendra200@gmail.com">
                 <FaEnvelope />
               </a>
             </div>
