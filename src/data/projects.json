@@ -20,21 +20,21 @@
     },
     {
       "id": 3,
-      "title": "Social Media Dashboard",
-      "description": "Analytics dashboard for social media metrics with data visualization and reporting.",
-      "technologies": ["React", "D3.js", "Firebase", "Chart.js", "Material-UI"],
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-      "github": "https://github.com",
-      "demo": "https://demo.com"
+      "title": "Local Business Hub",
+      "description": "Real local business hub website that use for share through internet your business.",
+      "technologies": ["React", "Node.js", "Express.js", "MongoDB"],
+      "image": "/images/real-local-business-hub.png",
+      "github": "https://github.com/Kamendra95/Real-Local-Business-Too",
+      "demo": "https://real-local-business-too-squq.vercel.app/"
     },
     {
       "id": 4,
-      "title": "AI Content Generator",
-      "description": "Web application that uses OpenAI API to generate content for blogs, social media, and marketing.",
-      "technologies": ["Python", "Django", "OpenAI API", "React", "Celery"],
-      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600",
-      "github": "https://github.com",
-      "demo": "https://demo.com"
+      "title": "Kamendra's Musics",
+      "description": "Web application that uses liseting your songs.",
+      "technologies": ["HTML", "CSS", "Java Script", "React"],
+      "image": "/images/kamendra,sMusics.png",
+      "github": "https://github.com/Kamendra95/Kamendra-s-Musics",
+      "demo": "https://kamendra-s-musics.vercel.app/"
     },
     {
       "id": 5,
