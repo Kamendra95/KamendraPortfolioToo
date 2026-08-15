@@ -95,13 +95,13 @@ const Contact = () => {
                     <p>sharmakamendra200@gmail.com</p>
                   </div>
                 </div>
-                <div className="info-item">
+                {/* <div className="info-item">
                   <FaPhone className="info-icon" />
                   <div>
                     <h4>Phone</h4>
-                    <p>+91 9534570667</p>
+                    <p>+91 1039580665</p>
                   </div>
-                </div>
+                </div> */}
                 <div className="info-item">
                   <FaMapMarkerAlt className="info-icon" />
                   <div>

@@ -4,8 +4,8 @@ import './About.css';
 
 const About = () => {
   const skills = {
-    frontend: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS'],
-    backend: ['Node.js', 'Express.js', 'Python', 'Java', 'JavaScript'],
+    frontend: ['React.js', 'Next.js', 'HTML', 'CSS'],
+    backend: ['Node.js', 'Express.js', 'Java', 'JavaScript'],
     database: ['MongoDB', 'MySQL'],
     tools: ['Eclips', 'VSCode', 'Git', 'Github',]
   };
